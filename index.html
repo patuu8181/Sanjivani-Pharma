@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjivani Pharmaceutical Company</title>
+    <title>Sanjivani Pharmaceutical Company</title>  
     
     <!-- CSS Embedded Directly in HTML -->
     <style>
@@ -267,6 +267,87 @@
             padding: 20px 0;
             margin-top: 30px;
         }
+
+        /* Media Query for Mobile Devices (width 600px or smaller) */
+        @media (max-width: 600px) {
+            /* General Styles */
+            body {
+                font-size: 14px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            /* Header */
+            header {
+                padding: 15px 0;
+            }
+
+            header .logo img {
+                height: 40px;
+                margin-right: 5px;
+            }
+
+            nav ul {
+                text-align: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            /* Hero Section */
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero .btn {
+                padding: 8px 16px;
+                font-size: 16px;
+            }
+
+            /* About Section */
+            .about h2 {
+                font-size: 28px;
+            }
+
+            .about p {
+                font-size: 16px;
+            }
+
+            /* Products Section */
+            .product-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            /* Contact Section */
+            .contact h2 {
+                font-size: 28px;
+            }
+
+            .contact form input, .contact form textarea {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .contact button {
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+
+            /* Footer */
+            footer {
+                padding: 15px 0;
+            }
+        }
     </style>
     <script>
         // Function to show alert message when "Add to Cart" is clicked
@@ -286,104 +367,78 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#products">Products</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
+        <video class="video-background" autoplay loop muted>
+            <source src="your-video.mp4" type="video/mp4">
+        </video>
         <div class="container">
-            <!-- Video as a background -->
-            <video class="video-background" autoplay loop muted>
-                <source src="./222.mp4" type="video/mp4">
-            </video>
-
-            <!-- Centered content -->
-            <h1 style="color: black;">Your Health, Our Priority</h1>
-            <h3 style="color: black;">Leading the way in pharmaceutical innovation and healthcare solutions.</h3>
-
-            <a href="#products" class="btn">Explore Our Products</a>
+            <h2>Welcome to Sanjivani Pharma</h2>
+            <p>Your trusted partner in pharmaceuticals</p>
+            <a href="#products" class="btn">Explore Products</a>
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="about">
+    <section class="about" id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>Sanjivani Pharmaceutical Company is committed to delivering high-quality, innovative healthcare solutions. With a focus on research and development, we aim to improve the lives of patients globally.</p>
+            <p>At Sanjivani Pharma, we are committed to providing the best pharmaceutical products to ensure the health and well-being of our customers. Our range of high-quality medicines is trusted by healthcare professionals across the country.</p>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section id="products" class="products">
+    <section class="products" id="products">
         <div class="container">
             <h2>Our Products</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="./fever.jpg" alt="Product 1">
-                    <h3>Fever Relief Tablet</h3>
-                    <p>Sangivani Pharma Fever Relief Tablet - Effective relief from fever and body aches.</p>
-                    <p class="price">₹ 750.00</p> <!-- Price in INR -->
-                    <button class="btn" onclick="addToCart('Fever Relief Tablet')">Buy Now</button>
-                    <button class="btn" onclick="addToCart('Fever Relief Tablet')">Add to Cart</button>
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>High-quality pharmaceutical product.</p>
+                    <p class="price">$20.00</p>
+                    <button class="btn" onclick="addToCart('Product 1')">Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="./capsule.jpg" alt="Product 2">
-                    <h3>Body Pain Capsule</h3>
-                    <p>Sangivani Pharma Body Pain Capsule - Quick relief from muscle and joint pain.</p>
-                    <p class="price">₹ 950.00</p> <!-- Price in INR -->
-                    <button class="btn" onclick="addToCart('Body Pain Capsule')">Buy Now</button>
-                    <button class="btn" onclick="addToCart('Body Pain Capsule')">Add to Cart</button>
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>Effective and affordable.</p>
+                    <p class="price">$15.00</p>
+                    <button class="btn" onclick="addToCart('Product 2')">Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="./hair_groth.jpg" alt="Product 3">
-                    <h3>Hair Growth Tablet</h3>
-                    <p>Sangivani Pharma Hair Growth Tablet - Nourishes and strengthens hair roots for healthy hair growth.</p>
-                    <p class="price">₹ 1200.00</p> <!-- Price in INR -->
-                    <button class="btn" onclick="addToCart('Hair Growth Tablet')">Buy Now</button>
-                    <button class="btn" onclick="addToCart('Hair Growth Tablet')">Add to Cart</button>
+                    <img src="product3.jpg" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>Trusted by healthcare professionals.</p>
+                    <p class="price">$25.00</p>
+                    <button class="btn" onclick="addToCart('Product 3')">Add to Cart</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <!-- Contact Information -->
-            <p>Email: <a href="mailto:prathamatigre@gmail.com" style="color: white;">prathamatigre@gmail.com</a></p>
-            <p>Phone: <a href="tel:+918529918181" style="color: white;">+61 473 175 335</a></p>
-            
-            <!-- Contact Form -->
-            <form action="#" method="post">
+            <form action="send_email.php" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
-            
-            <!-- Location Option -->
-            <div class="location">
-                <h3>Our Location</h3>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.8703650666993!2d74.18040641435314!3d16.850034688395983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc11e6edc6b4f17%3A0x1bf2d9e3b91bdf57!2sStarde%2C%20Maharashtra%20416911!5e0!3m2!1sen!2sin!4v1693481587770!5m2!1sen!2sin"
-                    width="600"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
-            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Sanjivani Pharmaceutical Company. All rights reserved.</p>
     </footer>
